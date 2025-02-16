@@ -87,3 +87,17 @@ Write a C program that prints exactly "Programming is like building a multilingu
 While using the _program_ prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 
 
+### **Task 5**
+* Hello, printf](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/5-printf.c)
+
+Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
+
+* Use the function printf
+* You are not allowed to use the function puts
+* Your program should return 0
+* Your program should compile without warning when using the -Wall gcc option
+
+
+While using the _program_ prints exactly _with proper grammar, but the outcome is a piece of art,_ , followed by a new line.
+
+
