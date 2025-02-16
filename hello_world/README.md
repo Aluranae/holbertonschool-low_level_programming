@@ -74,3 +74,16 @@ Write a script that compiles a C file and creates an executable named cisfun.
 While using the _gcc .._ command the script compiles a C file but does not link.
 
 
+### **Task 4**
+* [Hello, puts](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/4-puts.c)
+
+Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+
+* Use the function puts
+* You are not allowed to use printf
+* Your program should end with the value 0
+
+
+While using the _program_ prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+
+
