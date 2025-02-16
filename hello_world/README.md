@@ -107,12 +107,6 @@ While using the _program_ prints exactly _with proper grammar, but the outcome i
 Write a C program that prints the size of various types on the computer it is compiled and run on.
 
 * You should produce the exact same output as in the example
-* Warnings are allowed
-* Your program should return 0
-* If you are using a linux on Vagrant you might have to install the package libc6-dev-i386 to test the -m32 gcc option (normally you dont need to do anything on your sandbox).
-
-
-While using the _program_ prints the size of various types on the computer it is compiled and run on.
 
 ```julien@ubuntu:~/c/$ gcc 6-size.c -m32 -o size32 2> /tmp/32
 julien@ubuntu:~/c/$ gcc 6-size.c -m64 -o size64 2> /tmp/64
@@ -130,7 +124,12 @@ Size of a long long int: 8 byte(s)
 Size of a float: 4 byte(s)
 julien@ubuntu:~/c/$ echo $?
 0
-julien@ubuntu:~/c/$```
+julien@ubuntu:~/c/$
+```
+
+* Warnings are allowed
+* Your program should return 0
+* If you are using a linux on Vagrant you might have to install the package libc6-dev-i386 to test the -m32 gcc option (normally you dont need to do anything on your sandbox).
 
 
-
+While using the _program_ prints the size of various types on the computer it is compiled and run on.
