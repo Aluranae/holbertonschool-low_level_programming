@@ -20,7 +20,7 @@ In this project I discovered and learned the basics of C 12 tasks.
 
 
 ### **Task 0**
-* [Positive anything is better than negative nothing](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/0-positive_or_negative.c)
+* [Positive anything is better than negative nothing](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/0-positive_or_negative.c)
 
 This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print whether the number stored in the variable n is positive or negative.
 
@@ -38,7 +38,7 @@ While using the _program_ will assign a random number to the variable n each tim
 
 
 ### **Task 1**
-* [The last digit](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/1-last_digit.c)
+* [The last digit](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/1-last_digit.c)
 
 This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable n.
 
@@ -58,7 +58,7 @@ While using the _program_ will assign a random number to the variable n each tim
 
 
 ### **Task 2**
-* [I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/2-print_alphabet.c)
+* [I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/2-print_alphabet.c)
 
 Write a program that prints the alphabet in lowercase, followed by a new line.
 
