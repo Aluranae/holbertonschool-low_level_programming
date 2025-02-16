@@ -133,3 +133,31 @@ julien@ubuntu:~/c/$
 
 
 While using the _program_ prints the size of various types on the computer it is compiled and run on.
+
+
+### **Task 7**
+* [What happens when you type gcc main.c](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/7)
+
+Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate.
+
+* Use gcc as the compiler
+* Have at least one picture, at the top of the blog post
+* Publish your blog post on Medium or LinkedIn
+* Share your blog post at least on LinkedIn
+* Please, remember that these blogs must be written in English to further your technical ability in a variety of settings
+
+When done, please add all urls below (blog post, LinkedIn post, etc.)
+
+
+### **Task 8**
+* [Intel](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/100-intel)
+
+Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+
+* The C file name will be saved in the variable $CFILE.
+* The output file should be named the same as the C file, but with the extension .s instead of .c.
+	* Example: if the C file is main.c, the output file should be main.s
+
+While using the _gcc .._ command the script script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+
+
