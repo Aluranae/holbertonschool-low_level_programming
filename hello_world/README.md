@@ -101,3 +101,17 @@ Write a C program that prints exactly with proper grammar, but the outcome is a 
 While using the _program_ prints exactly _with proper grammar, but the outcome is a piece of art,_ , followed by a new line.
 
 
+### **Task 6**
+* [Size is not grandeur, and territory does not make a nation](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/6-size.c)
+
+Write a C program that prints the size of various types on the computer it is compiled and run on.
+
+* You should produce the exact same output as in the example
+* Warnings are allowed
+* Your program should return 0
+* If you are using a linux on Vagrant you might have to install the package libc6-dev-i386 to test the -m32 gcc option (normally you dont need to do anything on your sandbox).
+
+
+While using the _program_ prints the size of various types on the computer it is compiled and run on.
+
+
