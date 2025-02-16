@@ -117,3 +117,15 @@ Write a program that prints all single digit numbers of base 10 starting from 0,
 While using the _program_ prints all single digit numbers of base 10 starting from 0, followed by a new line.
 
 
+### **Task 7**
+* [Smile in the mirror](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/7-print_tebahpla.c)
+
+Write a program that prints the lowercase alphabet in reverse, followed by a new line.
+
+* You can only use the putchar function (every other function (printf, puts, etc...) is forbidden)
+* All your code should be in the main function
+* You can only use putchar twice in your code
+
+While using the _program_ prints the lowercase alphabet in reverse, followed by a new line.
+
+
