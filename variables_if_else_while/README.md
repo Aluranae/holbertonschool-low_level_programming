@@ -94,3 +94,13 @@ Write a program that prints the alphabet in lowercase, followed by a new line.
 While using the _program_ prints the alphabet in lowercase, followed by a new line.
 
 
+### **Task 5**
+* [Numbers](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/5-print_numbers.c)
+
+Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+* All your code should be in the main function
+
+While using the _program_ prints the alphabet in lowercase, followed by a new line.
+
+
