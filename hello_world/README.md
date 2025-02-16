@@ -124,9 +124,7 @@ Size of a long long int: 8 byte(s)
 Size of a float: 4 byte(s)
 julien@ubuntu:~/c/$ echo $?
 0
-julien@ubuntu:~/c/$```
-
-
+julien@ubuntu:~/c/$
 
 * Warnings are allowed
 * Your program should return 0
