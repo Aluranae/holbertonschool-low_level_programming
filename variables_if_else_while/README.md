@@ -69,3 +69,15 @@ Write a program that prints the alphabet in lowercase, followed by a new line.
 While using the _program_ prints the alphabet in lowercase, followed by a new line.
 
 
+### **Task 3**
+* [alphABET](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/3-print_alphabets.c)
+
+Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+
+* You can only use the putchar function (every other function ((printf, puts, etc...) is forbidden)
+* All your code should be in the main function
+* You can only use putchar three times in your code
+
+While using the _program_ the alphabet in lowercase, and then in uppercase, followed by a new line.
+
+
