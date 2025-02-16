@@ -81,3 +81,16 @@ Write a program that prints the alphabet in lowercase, and then in uppercase, fo
 While using the _program_ the alphabet in lowercase, and then in uppercase, followed by a new line.
 
 
+### **Task 4**
+* [When I was having that alphabet soup, I never thought that it would pay off	](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/4-print_alphabt.c)
+
+Write a program that prints the alphabet in lowercase, followed by a new line.
+
+* Print all the letters except q and e
+* You can only use the putchar function (every other function (printf, puts, etc...) is forbidden)
+* All your code should be in the main function
+* You can only use putchar twice in your code
+
+While using the _program_ prints the alphabet in lowercase, followed by a new line.
+
+
