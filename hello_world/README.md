@@ -64,3 +64,13 @@ Write a script that generates the assembly code of a C code and save it in an ou
 While using the _gcc .._ command the script compiles a C file but does not link.
 
 
+### **Task 3**
+* [Name](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/3-name)
+
+Write a script that compiles a C file and creates an executable named cisfun.
+
+* The C file name will be saved in the variable $CFILE
+
+While using the _gcc .._ command the script compiles a C file but does not link.
+
+
