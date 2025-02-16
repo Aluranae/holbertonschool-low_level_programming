@@ -104,3 +104,16 @@ Write a program that prints all single digit numbers of base 10 starting from 0,
 While using the _program_ prints the alphabet in lowercase, followed by a new line.
 
 
+### **Task 6**
+* [Numberz](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/variables_if_else_while/6-print_numberz.c)
+
+Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+* You are not allowed to use any variable of type char
+* You can only use the putchar function (every other function (printf, puts, etc...) is forbidden)
+* You can only use putchar twice in your code
+* All your code should be in the main function
+
+While using the _program_ prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+
