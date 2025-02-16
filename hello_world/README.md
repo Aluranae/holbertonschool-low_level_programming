@@ -135,6 +135,9 @@ julien@ubuntu:~/c/$
 While using the _program_ prints the size of various types on the computer it is compiled and run on.
 
 
+## Advanced tasks
+
+
 ### **Task 7**
 * [What happens when you type gcc main.c](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/7-blog_post)
 
