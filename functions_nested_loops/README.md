@@ -27,7 +27,7 @@ Don't forget to push your header file
 
 
 ### **Task 0**
-* [_putchar](https://github.com/Aluranae/holbertonschool-shell/blob/main/functions_nested_loops/0-putchar.c)
+* [_putchar](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/functions_nested_loops/0-putchar.c)
 
 Write a program that prints _putchar, followed by a new line.
 
