@@ -52,3 +52,15 @@ Write a function that prints 10 times the alphabet, in lowercase, followed by a 
 * You can only use _putchar twice in your code
 
 
+### **Task 3**
+* [islower](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/functions_nested_loops/3-islower.c)
+
+Write a function that checks for lowercase character.
+
+* Prototype: int _islower(int c);
+* Returns 1 if c is lowercase
+* Returns 0 otherwise
+
+FYI: The standard library provides a similar function: islower. Run man islower to learn more.
+
+
