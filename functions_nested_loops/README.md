@@ -43,3 +43,12 @@ Write a function that prints the alphabet, in lowercase, followed by a new line.
 * You can only use _putchar twice in your code
 
 
+### **Task 2**
+* [10 x alphabet](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/functions_nested_loops/2-print_alphabet_x10.c)
+
+Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
+
+* Prototype: void print_alphabet_x10(void);
+* You can only use _putchar twice in your code
+
+
