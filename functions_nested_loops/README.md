@@ -147,3 +147,14 @@ Write a function that prints all natural numbers from n to 98, followed by a new
 
 
 
+### **Task 12**
+* [98 The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/functions_nested_loops/100-times_table.c)
+
+Write a function that prints the n times table, starting with 0.
+
+* Prototype: void print_times_table(int n);
+* If n is greater than 15 or less than 0 the function should not print anything
+* Format: see example
+
+
+
