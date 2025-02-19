@@ -10,7 +10,7 @@
  * Return: The last digit of `n`.
  */
 
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 	int d;
 
