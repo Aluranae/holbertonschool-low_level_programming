@@ -10,7 +10,7 @@
  * Return: The last digit of `n`.
  */
 
-int print_last_digit(int n)
+int print_last_digit(int)
 {
 	int d;
 
@@ -19,6 +19,7 @@ int print_last_digit(int n)
 	if (d < 0)
 	d = -d;
 
-		_putchar(d);
-	return (n);
+	_putchar(d + '0');
+
+	return (d);
 }
