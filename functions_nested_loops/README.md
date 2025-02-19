@@ -116,4 +116,13 @@ Write a function that prints every minute of the day of Jack Bauer, starting fro
 * You can listen to [this soundtrack](https://www.youtube.com/watch?v=btAfXqgMkPs) while coding :)
 
 
+### **Task 9**
+* [Learn your times table](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/functions_nested_loops/9-times_table.c)
+
+Write a function that prints the 9 times table, starting with 0.
+
+* Prototype: void times_table(void);
+* Format: see example
+
+
 
