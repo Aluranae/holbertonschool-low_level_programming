@@ -19,7 +19,7 @@ int main(void)
 	for (count = 0; count < 98; count++)
 	{
 		if (fib1_high > 0)
-			printf("%lu%lu", fib1_high, fib1_low);
+			printf("%lu%010lu", fib1_high, fib1_low);
 		else
 			printf("%lu", fib1_low);
 
@@ -29,10 +29,10 @@ int main(void)
 		fibsum_low = fib1_low + fib2_low;
 		fibsum_high = fib1_high + fib2_high;
 
-		if (fibsum_low > overflow)
+		if (fibsum_low >= overflow)
 		{
-			fibsum_high += fibsum_low / overflow;
-			fibsum_low %= overflow;
+			fibsum_high += 1;
+			fibsum_low -= overflow;
 		}
 
 		fib1_high = fib2_high;
