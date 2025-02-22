@@ -151,6 +151,8 @@ Write a blog post that explains all the steps of compilation. Use command lines 
 
 When done, please add all urls below (blog post, LinkedIn post, etc.)
 
+	* [Linkedin](https://www.linkedin.com/posts/benjamin-estrada-880b06297_this-article-is-part-of-the-many-tasks-related-activity-7296967863184031745-DA89?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEfjoWABQhDobpxQG_X41v8grgLc1NtVwLc)
+	* [Medium](https://medium.com/@Aluranae/what-happens-when-you-type-gcc-main-c-18c99c020e97)
 
 ### **Task 8**
 * [Intel](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/hello_world/100-intel)
