@@ -10,8 +10,9 @@
  * - 5, prints "Buzz" instead of the number.
  * - Both 3 and 5, prints "FizzBuzz".
  * Numbers and words are separated by spaces.
+ *
+ * Return: void
  */
-
 void fizzBuzz(int n);
 
 /**
@@ -28,6 +29,19 @@ int main(void)
 	fizzBuzz(100);
 	return (0);
 }
+
+/**
+ * fizzBuzz - Prints numbers from 1 to n with FizzBuzz logic.
+ * @n: The upper limit of the numbers to print.
+ *
+ * Description: Prints numbers from 1 to n. If a number is a multiple of:
+ * - 3, prints "Fizz" instead of the number.
+ * - 5, prints "Buzz" instead of the number.
+ * - Both 3 and 5, prints "FizzBuzz".
+ * Numbers and words are separated by spaces.
+ *
+ * Return: void
+ */
 
 void fizzBuzz(int n)
 {
