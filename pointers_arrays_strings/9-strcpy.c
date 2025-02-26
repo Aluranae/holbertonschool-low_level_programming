@@ -1,15 +1,24 @@
 #include "main.h"
 
 /**
-* print_array - prints n elements of an array of integers,
-* followed by a new line.
-* @a: Pointer to the array of integers
-* @n: Number of elements to print
+* _strcpy - copies the string.
+*
+* @src: copy from
+* @dest: copy to
 *
 *
-* Return: void
+* Return: string
 */
 
 
 char *_strcpy(char *dest, char *src)
 {
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+		dest[i] = '\0';
+	return (dest);
+}
