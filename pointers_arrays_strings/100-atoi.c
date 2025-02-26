@@ -31,9 +31,9 @@ int _atoi(char *s)
 		idx++;
 	}
 
-	if (s[idx] == ' ')
+	while (s[idx] == ' ')
 	{
-		return (0);
+		idx++;
 	}
 
 	while (s[idx] >= '0' && s[idx] <= '9')
