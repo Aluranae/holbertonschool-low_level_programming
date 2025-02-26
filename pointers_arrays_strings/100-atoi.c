@@ -13,37 +13,19 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	int res = 0;
-	int idx = 0;
-	int max_int = 2147483647;
+	unsigned int num = 0;
 
-	while (s[idx] == ' ')
-	{
-		idx++;
-	}
-
-	while (s[idx] == '-' || s[idx] == '+')
-	{
-		if (s[idx] == '-')
-		{
+	do {
+		if (*s == '-')
 			sign *= -1;
-		}
-		idx++;
-	}
 
-	while (s[idx] == ' ')
-	{
-		idx++;
-	}
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
 
-	while (s[idx] >= '0' && s[idx] <= '9')
-	{
-		if (res > max_int / 10 || (res == max_int / 10 && s[idx] - '0' > 7))
-		{
-		return (sign == 1 ? max_int : -max_int - 1);
-		}
+		else if (num > 0)
+			break;
 
-		res = 10 * res + (s[idx++] - '0');
-	}
-	return (res * sign);
+	} while (*s++);
+
+	return (num * sign);
 }
