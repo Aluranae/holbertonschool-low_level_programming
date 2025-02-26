@@ -31,6 +31,11 @@ int _atoi(char *s)
 		idx++;
 	}
 
+	if (s[idx] == ' ')
+	{
+		return (0);
+	}
+
 	while (s[idx] >= '0' && s[idx] <= '9')
 	{
 		if (res > max_int / 10 || (res == max_int / 10 && s[idx] - '0' > 7))
