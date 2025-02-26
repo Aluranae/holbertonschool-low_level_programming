@@ -22,12 +22,13 @@ int _atoi(char *s)
 		idx++;
 	}
 
-	if (s[idx] == '-' || s[idx] == '+')
+	while (s[idx] == '-' || s[idx] == '+')
 	{
-		if (s[idx++] == '-')
+		if (s[idx] == '-')
 		{
 			sign = -1;
 		}
+		idx++;
 	}
 
 	while (s[idx] >= '0' && s[idx] <= '9')
