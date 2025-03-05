@@ -26,7 +26,7 @@ We will use our own main.c files at compilation. Our main.c files might be diffe
 
 
 ### **Task 0**
-* [isupper](https://github.com/Aluranae/holbertonschool-low_level_programming/more_functions_nested_loops/0-isupper.c)
+* [isupper](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/more_functions_nested_loops/0-isupper.c)
 
 Write a function that checks for uppercase character.
 
@@ -39,7 +39,7 @@ FYI: The standard library provides a similar function: isupper. Run man isupper 
 
 
 ### **Task 1**
-* [ isdigit](https://github.com/Aluranae/holbertonschool-low_level_programming/more_functions_nested_loops/1-isdigit.c)
+* [ isdigit](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/more_functions_nested_loops/1-isdigit.c)
 
 Write a function that checks for a digit (0 through 9).
 
