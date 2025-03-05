@@ -159,7 +159,7 @@ Write a function that prints a triangle, followed by a new line.
 
 
 
-## **Task 11**
+### **Task 11**
 * [The problem of distinguishing prime numbers from composite numbers and of resolving the latter into their prime factors is known to be one of the most important and useful in arithmetic](https://github.com/Aluranae/holbertonschool-low_level_programming/blob/main/more_functions_nested_loops/100-prime_factor.c)
 
 The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
