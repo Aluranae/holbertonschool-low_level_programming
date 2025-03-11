@@ -12,7 +12,7 @@
 
 void print_dog(struct dog *d)
 {
-	/* Check if the pointer is valid */
+	/* Check if the pointer d is valid */
 	if (d != NULL)
 	{
 		/* Print the dog's name */
@@ -22,7 +22,7 @@ void print_dog(struct dog *d)
 			printf("Name: %s\n", d->name);
 
 		/* Print the dog's age with 1 decimal */
-		printf("Age: %.1f\n", d->age);
+		printf("Age: %f\n", d->age);
 
 		/* Print the dog's owner */
 		if (d->owner == NULL)
