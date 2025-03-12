@@ -1,54 +1,60 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
-* new_dog - Creates a new dog
-* @name: Pointer to a string (dog's name)
-* @age: Float value (dog's age)
-* @owner: Pointer to a string (owner's name)
-*
-* Return: Pointer to the new dog, or NULL if allocation fails
-*/
+ * new_dog - Creates a new dog
+ * @name: Pointer to a string (dog's name)
+ * @age: Float value (dog's age)
+ * @owner: Pointer to a string (owner's name)
+ *
+ * Return: Pointer to the new dog, or NULL if allocation fails
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	/* Declare a pointer to a new dog */
-	dog_t *new_dog;
+	int namlen, ownlen, i;
+	dog_t *doggy;
 
 	/* Check if input strings are NULL */
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
+	/* Get the length of name and owner */
+	namlen = strlen(name) + 1;
+	ownlen = strlen(owner) + 1;
+
 	/* Allocate memory for the new dog */
-	new_dog = malloc(sizeof(dog_t));
-
-	/* Check if the memory allocation was successful */
-	if (new_dog == NULL)
+	doggy = malloc(sizeof(dog_t));
+	if (doggy == NULL)
 		return (NULL);
 
-    	/* Allocate and copy the dog's name */
-	new_dog->name = malloc(strlen(name) + 1);
-	if (new_dog->name == NULL)
+	/* Allocate memory for name */
+	doggy->name = malloc(namlen);
+	if (doggy->name == NULL)
 	{
-		free(new_dog);
+	free(doggy);
 		return (NULL);
 	}
-	strcpy(new_dog->name, name);
 
-	/* Allocate and copy the dog's owner */
-	new_dog->owner = malloc(strlen(owner) + 1);
-	if (new_dog->owner == NULL)
+	/* Allocate memory for owner */
+	doggy->owner = malloc(ownlen);
+	if (doggy->owner == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog);
+	free(doggy->name);
+	free(doggy);
 		return (NULL);
 	}
-	strcpy(new_dog->owner, owner);
 
-	/* Assign the dog's age */
-	new_dog->age = age;
+	/* Copy name */
+	for (i = 0; i < namlen; i++)
+		doggy->name[i] = name[i];
 
-	/* Return the pointer to the new dog */
-	return (new_dog);
+	/* Copy owner */
+	for (i = 0; i < ownlen; i++)
+		doggy->owner[i] = owner[i];
+
+	/* Assign age */
+	doggy->age = age;
+
+	return (doggy);
 }
