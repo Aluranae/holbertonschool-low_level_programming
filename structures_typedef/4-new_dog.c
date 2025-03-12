@@ -15,46 +15,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int namlen, ownlen, i;
 	dog_t *doggy;
 
-	/* Check if input strings are NULL */
-	if (name == NULL || owner == NULL)
-		return (NULL);
-
-	/* Get the length of name and owner */
-	namlen = strlen(name) + 1;
-	ownlen = strlen(owner) + 1;
-
-	/* Allocate memory for the new dog */
+	namlen = ownlen = 0;
+	while (name[namlen++])
+		;
+	while (owner[ownlen++])
+		;
 	doggy = malloc(sizeof(dog_t));
 	if (doggy == NULL)
 		return (NULL);
 
-	/* Allocate memory for name */
-	doggy->name = malloc(namlen);
-	if (doggy->name == NULL)
-	{
-	free(doggy);
+	doggy->name = malloc(namlen * sizeof(doggy->name));
+	if (doggy == NULL)
 		return (NULL);
-	}
-
-	/* Allocate memory for owner */
-	doggy->owner = malloc(ownlen);
-	if (doggy->owner == NULL)
-	{
-	free(doggy->name);
-	free(doggy);
-		return (NULL);
-	}
-
-	/* Copy name */
 	for (i = 0; i < namlen; i++)
 		doggy->name[i] = name[i];
 
-	/* Copy owner */
-	for (i = 0; i < ownlen; i++)
-		doggy->owner[i] = owner[i];
-
-	/* Assign age */
 	doggy->age = age;
 
+	doggy->owner = malloc(olen * sizeof(doggy->owner));
+	if (doggy == NULL)
+		return (NULL);
+	for (i = 0; i < ownlen; i++)
+		doggy->owner[i] = owner[i];
 	return (doggy);
 }
