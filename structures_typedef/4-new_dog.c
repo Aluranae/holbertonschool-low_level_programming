@@ -1,5 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
 * new_dog - Creates a new dog
@@ -12,41 +14,40 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	/*declare a pointer to a new dog*/
-	dog_t *new_dog;
+	/* Declare a pointer to a new dog */
+        dog_t *new_dog;
 
-	/*allocate memory for the new dog*/
+	/* Check if input strings are NULL */
+	if (name == NULL || owner == NULL)
+	return (NULL);
+
+	/* Allocate memory for the new dog */
 	new_dog = malloc(sizeof(dog_t));
 
-	/*check if the memory allocation was successful*/
+	/* Check if the memory allocation was successful */
 	if (new_dog == NULL)
-		return (NULL);
+	return (NULL);
 
-	/*allocate memory for the dog's name*/
-	new_dog->name = malloc(strlen(name) + 1);
-
+	/* Allocate and copy the dog's name */
+	new_dog->name = strdup(name);
 	if (new_dog->name == NULL)
 	{
-		free(new_dog);
-		return (NULL);
+	free(new_dog);
+	return (NULL);
 	}
 
-	/*allocate memory for the dog's owner*/
-	new_dog->owner = malloc(strlen(owner) + 1);
-
+	/* Allocate and copy the dog's owner */
+	new_dog->owner = strdup(owner);
 	if (new_dog->owner == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog);
-		return (NULL);
+	free(new_dog->name);
+	free(new_dog);
+	return (NULL);
 	}
 
-	/*copy the name and owner to the new dog*/
-	strcpy(new_dog->name, name);
+	/* Assign the dog's age */
 	new_dog->age = age;
 
-
-
+	/* Return the pointer to the new dog */
 	return (new_dog);
-
 }
