@@ -2,6 +2,51 @@
 #include <stdlib.h>
 
 /**
+ * _strdup_custom - Custom function to duplicate a string
+ * @str: The string to duplicate
+ *
+ * Return: Pointer to the newly allocated string, or NULL on failure
+ */
+char *_strdup_custom(char *str)
+{
+	char *dup;
+	int i, len = 0;
+
+	if (str == NULL)
+	return (NULL);
+
+	while (str[len])
+		len++;
+	len++; /* Include null terminator */
+
+	dup = malloc(len);
+	if (dup == NULL)
+		return (NULL);
+
+	for (i = 0; i < len; i++)
+		dup[i] = str[i];
+
+	return (dup);
+}
+
+/**
+ * free_dog_memory - Frees allocated memory in case of failure
+ * @dogg: Pointer to the dog struct
+ */
+
+void free_dog_memory(dog_t *dogg)
+{
+	if (dogg)
+	{
+		if (dogg->name)
+			free(dogg->name);
+		if (dogg->owner)
+			free(dogg->owner);
+		free(dogg);
+	}
+}
+
+/**
  * new_dog - Creates a new dog
  * @name: Pointer to a string (dog's name)
  * @age: Float value (dog's age)
@@ -12,30 +57,36 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int namlen, ownlen, i;
-	dog_t *doggy;
+	dog_t *dogg;
 
-	namlen = ownlen = 0;
-	while (name[namlen++])
-		;
-	while (owner[ownlen++])
-		;
-	doggy = malloc(sizeof(dog_t));
-	if (doggy == NULL)
+	/* Check if input strings are NULL */
+	if (name == NULL || owner == NULL)
 		return (NULL);
 
-	doggy->name = malloc(namlen * sizeof(doggy->name));
-	if (doggy == NULL)
+	/* Allocate memory for the new dog */
+	dogg = malloc(sizeof(dog_t));
+	if (dogg == NULL)
 		return (NULL);
-	for (i = 0; i < namlen; i++)
-		doggy->name[i] = name[i];
 
-	doggy->age = age;
-
-	doggy->owner = malloc(olen * sizeof(doggy->owner));
-	if (doggy == NULL)
+	/* Duplicate name */
+	dogg->name = _strdup_custom(name);
+	if (dogg->name == NULL)
+	{
+		free_dog_memory(dogg);
 		return (NULL);
-	for (i = 0; i < ownlen; i++)
-		doggy->owner[i] = owner[i];
-	return (doggy);
+	}
+
+	/* Duplicate owner */
+	dogg->owner = _strdup_custom(owner);
+	if (dogg->owner == NULL)
+	{
+		free_dog_memory(dogg);
+		return (NULL);
+	}
+
+	/* Assign age */
+	dogg->age = age;
+
+	return (dogg);
 }
+
