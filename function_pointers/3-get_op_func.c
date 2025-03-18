@@ -24,21 +24,11 @@ op_t ops[] = {
 	{NULL, NULL}
 };
 
-/* Loop through the array until a match is found */
-while (ops[i].op != NULL)
-{
-	/* Compare character by character without strcmp() */
-	int j = 0;
-
-	while (ops[i].op[j] != '\0' && s[j] != '\0' && ops[i].op[j] == s[j])
-		j++;
-
-	/* If we reached the end of both strings, they are equal */
-	if (ops[i].op[j] == '\0' && s[j] == '\0')
-		return (ops[i].f);
-
-	i++;
-}
-
-return (NULL); /* No match found */
+	while (ops[i].op != NULL)
+	{
+		if (*s == *(ops[i].op) && s[1]  == '\0')
+			return (ops[i].f);
+		i++;
+	}
+return (NULL);
 }
