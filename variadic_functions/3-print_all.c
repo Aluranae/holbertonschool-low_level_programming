@@ -3,81 +3,61 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+
+/* Functions to display */
+
 /**
-* print_char - Prints a character from a variadic argument list.
-* @arg: The variadic argument list containing the character to print.
-*
-* Description: Extracts a character from the argument list and prints it.
+* print_char - Prints a character.
+* @arg: List of arguments.
 */
 
 void print_char(va_list arg)
 {
-
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
+	printf("%c", va_arg(arg, int));
 }
 
-
 /**
-* print_int - Prints an integer from a variadic argument list.
-* @arg: The variadic argument list containing the integer to print.
-*
-* Description: Extracts an integer from the argument list and prints it.
+* print_int - Prints an integer.
+* @arg: List of arguments.
 */
 
 void print_int(va_list arg)
 {
-	int num;
-
-	num = va_arg(arg, int);
-	printf("%d", num);
+	printf("%d", va_arg(arg, int));
 }
 
 /**
-* print_float - Prints a float from a variadic argument list.
-* @arg: The variadic argument list containing the float to print.
-*
-* Description: Extracts a float from the argument list and prints it.
+* print_float - Prints a float.
+* @arg: List of arguments.
 */
 
 void print_float(va_list arg)
 {
-	float fnum;
-
-	fnum = va_arg(arg, double);
-	printf("%f", fnum);
+	printf("%f", va_arg(arg, double));
 }
 
-
 /**
-* print_string - Prints a string from a variadic argument list.
-* @arg: The variadic argument list containing the string to print.
-*
-* Description: If the string is NULL, it prints "(nil)".
+* print_string - Prints a string.
+* @arg: List of arguments.
 */
 
 void print_string(va_list arg)
 {
+	char *str = va_arg(arg, char *);
 
-	char *str;
+	if (str == NULL)
+		str = "(nil)";
 
-	str = va_arg(arg, char *);
-
-		if (str == NULL)
-		{
-			printf("%s", "(nil)");
-			return;
-		}
-		printf("%s", str);
+	printf("%s", str);
 }
 
+
+/* Structure definition */
+
 /**
-* struct cifs - Struct to map format specifiers,
-* to their corresponding functions.
-* @specifier: The format specifier (e.g., 'c', 'i', 'f', 's').
-* @func: Pointer to the function that handles the specifier.
+* struct cifs - Struct associant les formats à leurs fonctions.
+* @specifier: Caractère du format ('c', 'i', 'f', 's').
+* @func: Pointeur vers la fonction d'affichage.
 */
 
 typedef struct cifs
@@ -87,9 +67,9 @@ typedef struct cifs
 	void (*func)(va_list);
 } cifs_t;
 
-/* format_map - Array of cifs structs mapping specifiers to functions */
+/* Correspondence table */
 
-struct cifs format_map[] = {
+cifs_t format_map[] = {
 	{'c', print_char},
 	{'i', print_int},
 	{'f', print_float},
@@ -99,12 +79,6 @@ struct cifs format_map[] = {
 /**
 * print_all - Prints various types of arguments based on format.
 * @format: A format string specifying argument types.
-*
-* Description: Uses variadic arguments to print values.
-* Format specifiers:
-* 'c' - char, 'i' - int, 'f' - float, 's' - string (prints "(nil)" if NULL).
-* Ignores unrecognized specifiers.
-* Prints a new line at the end.
 */
 
 void print_all(const char * const format, ...)
@@ -113,20 +87,13 @@ void print_all(const char * const format, ...)
 
 	int i = 0;
 
-	int j = 0;
+	int j;
 
 	const char *separator = "";
 
 	va_start(args, format);
 
-	if (format == NULL)
-	{
-		printf("\n");
-		va_end(args);
-		return;
-	}
-
-	while (format && (*(format + i)))
+	while (format && format[i])
 	{
 		j = 0;
 
