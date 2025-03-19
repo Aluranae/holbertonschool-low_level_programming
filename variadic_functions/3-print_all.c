@@ -63,23 +63,24 @@ void print_all(const char * const format, ...)
 	int i = 0, j;
 
 	cifs_t format_map[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string}
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string},
+		{NULL, NULL}
 	};
 
 	const char *separator = "";
 
 	va_start(args, format);
 
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 
 		while (j < 4)
 		{
-			if (format[i] == format_map[j].specifier)
+			if (format[i] == *format_map[j].specifier)
 			{
 				printf("%s", separator);
 				format_map[j].func(args);

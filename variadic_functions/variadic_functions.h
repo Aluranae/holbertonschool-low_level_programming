@@ -13,7 +13,7 @@
 
 typedef struct cifs
 {
-	char specifier;
+	char *specifier;
 
 	void (*func)(va_list);
 } cifs_t;
