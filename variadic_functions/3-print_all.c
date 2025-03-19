@@ -3,12 +3,11 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-
-/* Functions to display */
+/*   Fonctions pour afficher  */
 
 /**
-* print_char - Prints a character.
-* @arg: List of arguments.
+* print_char - Prints a character from a variadic argument list.
+* @arg: The variadic argument list containing the character to print.
 */
 
 void print_char(va_list arg)
@@ -17,8 +16,8 @@ void print_char(va_list arg)
 }
 
 /**
-* print_int - Prints an integer.
-* @arg: List of arguments.
+* print_int - Prints an integer from a variadic argument list.
+* @arg: The variadic argument list containing the integer to print.
 */
 
 void print_int(va_list arg)
@@ -27,8 +26,8 @@ void print_int(va_list arg)
 }
 
 /**
-* print_float - Prints a float.
-* @arg: List of arguments.
+* print_float - Prints a float from a variadic argument list.
+* @arg: The variadic argument list containing the float to print.
 */
 
 void print_float(va_list arg)
@@ -37,8 +36,8 @@ void print_float(va_list arg)
 }
 
 /**
-* print_string - Prints a string.
-* @arg: List of arguments.
+* print_string - Prints a string from a variadic argument list.
+* @arg: The variadic argument list containing the string to print.
 */
 
 void print_string(va_list arg)
@@ -51,49 +50,30 @@ void print_string(va_list arg)
 	printf("%s", str);
 }
 
-
-/* Structure definition */
-
 /**
-* struct cifs - Struct associant les formats à leurs fonctions.
-* @specifier: Caractère du format ('c', 'i', 'f', 's').
-* @func: Pointeur vers la fonction d'affichage.
-*/
-
-typedef struct cifs
-{
-	char specifier;
-
-	void (*func)(va_list);
-} cifs_t;
-
-/* Correspondence table */
-
-cifs_t format_map[] = {
-	{'c', print_char},
-	{'i', print_int},
-	{'f', print_float},
-	{'s', print_string}
-};
-
-/**
-* print_all - Prints various types of arguments based on format.
-* @format: A format string specifying argument types.
+* print_all - Prints various types of arguments based on a format string.
+* @format: A string containing format specifiers ('c', 'i', 'f', 's').
+*          Each specifier corresponds to a type: char, int, float, string.
+*          If format is NULL, the function prints a newline.
 */
 
 void print_all(const char * const format, ...)
 {
 	va_list args;
+	int i = 0, j;
 
-	int i = 0;
-
-	int j;
+	cifs_t format_map[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string}
+	};
 
 	const char *separator = "";
 
 	va_start(args, format);
 
-	while (format && format[i])
+	while (format[i])
 	{
 		j = 0;
 
