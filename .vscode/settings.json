@@ -3,6 +3,7 @@
     "C_Cpp.default.compilerPath": "",
     "files.associations": {
         "main.h": "c",
-        "3-calc.h": "c"
+        "3-calc.h": "c",
+        "lists.h": "c"
     }
 }
