@@ -27,11 +27,7 @@ typedef struct dlistint_s
 
 size_t print_dlistint(const dlistint_t *h);
 
-
-
-
-
-int _putchar(char c);
+size_t dlistint_len(const dlistint_t *h);
 
 
 
