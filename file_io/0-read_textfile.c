@@ -1,4 +1,7 @@
 #include "main.h"
+#include <fcntl.h>      /* for open */
+#include <unistd.h>     /* for read, write, close */
+#include <stdlib.h>
 
 /**
 * read_textfile - Reads a text file and prints it
@@ -13,3 +16,26 @@
 */
 
 ssize_t read_textfile(const char *filename, size_t letters)
+{
+	int fd;                     /* File descriptor */
+
+	char *buffer;               /* Buffer to hold the content */
+
+	ssize_t r_bytes, w_bytes;   /* Read and written byte counters */
+
+	/* Check if filename is NULL */
+
+	/* Open the file in read-only mode */
+
+	/* Allocate memory for the buffer using malloc */
+
+	/* Read from the file */
+
+	/* Write to the standard output using write() and STDOUT_FILENO */
+
+	/* Free the buffer */
+
+	/* Close the file */
+
+	/* Return the number of bytes successfully read and printed */
+}
