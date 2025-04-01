@@ -1,12 +1,23 @@
 #include "lists.h"
-#include <stdio.>
 
 /**
-* dlistint_len - Compte le nombre d'éléments,
-* dans une liste doublement chaînée
-* @h: Pointeur vers le premier nœud de la liste
+* dlistint_len - Counts the number of elements in a doubly linked list
+* @h: Pointer to the first node of the list
 *
-* Return: Nombre total de nœuds dans la liste
+* Return: The total number of nodes in the list
 */
 
 size_t dlistint_len(const dlistint_t *h)
+{
+	size_t count = 0;
+
+	if (h == NULL)
+		return (0);
+
+	while (h != NULL)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
+}
