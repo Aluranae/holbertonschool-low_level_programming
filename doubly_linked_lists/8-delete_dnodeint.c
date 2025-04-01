@@ -40,13 +40,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	/* Mettre à jour les pointeurs prev/next du voisinage */
 	if (current->next)
-    {
+	{
 		current->next->prev = current->prev;
-    }
+	}
 	if (current->prev)
-    {
+	{
 		current->prev->next = current->next;
-    }
+	}
 
 	free(current);
 	return (1);
