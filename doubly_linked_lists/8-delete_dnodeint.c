@@ -40,14 +40,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	/* Mettre à jour les pointeurs prev/next du voisinage */
 	if (current->next)
+    {
 		current->next->prev = current->prev;
-
-		if (current->prev)
+    }
+	if (current->prev)
+    {
 		current->prev->next = current->next;
+    }
 
-	/* Libérer le nœud courant */
 	free(current);
-
-	/* Retourner 1 si succès */
 	return (1);
 }
