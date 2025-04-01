@@ -17,11 +17,11 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;                     /* File descriptor */
+	int fd;  /* File descriptor */
 
-	char *buffer;               /* Buffer to hold the content */
+	char *buffer; /* Buffer to hold the content */
 
-	ssize_t r_bytes, w_bytes;   /* Read and written byte counters */
+	ssize_t r_bytes, w_bytes; /* Read and written byte counters */
 
 	/* Check if filename is NULL */
 	if (filename == NULL)
@@ -49,6 +49,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
         return (0);
     }
 
+	/* No bytes read */
+	if (r_bytes == 0) 
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
 	/* Write to the standard output using write() and STDOUT_FILENO */
 	w_bytes = write(STDOUT_FILENO, buffer, r_bytes);
 	if (w_bytes != r_bytes)
