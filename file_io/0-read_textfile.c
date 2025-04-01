@@ -24,18 +24,46 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t r_bytes, w_bytes;   /* Read and written byte counters */
 
 	/* Check if filename is NULL */
-
-	/* Open the file in read-only mode */
+	if (filename == NULL)
+	return (0);
 
 	/* Allocate memory for the buffer using malloc */
+	buffer = malloc(letters);
+	if (buffer == NULL)
+		return (0);
+
+	/* Open the file in read-only mode */
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+	{
+		free(buffer);
+		return (0);
+	}
 
 	/* Read from the file */
+	r_bytes = read(fd, buffer, letters);
+	if (r_bytes == -1)
+	{
+        free(buffer);
+        close(fd);
+        return (0);
+    }
 
 	/* Write to the standard output using write() and STDOUT_FILENO */
+	w_bytes = write(STDOUT_FILENO, buffer, r_bytes);
+	if (w_bytes != r_bytes)
+	{
+    	free(buffer);
+    	close(fd);
+    	return (0);
+	}
 
 	/* Free the buffer */
+	free(buffer);
 
 	/* Close the file */
+	close(fd);
 
 	/* Return the number of bytes successfully read and printed */
+	return (r_bytes);
 }
