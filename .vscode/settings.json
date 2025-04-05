@@ -1,9 +1,0 @@
-{
-    "C_Cpp.errorSquiggles": "disabled",
-    "C_Cpp.default.compilerPath": "",
-    "files.associations": {
-        "main.h": "c",
-        "3-calc.h": "c",
-        "lists.h": "c"
-    }
-}
